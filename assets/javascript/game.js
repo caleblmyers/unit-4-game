@@ -2,18 +2,54 @@ var goal = Math.floor(Math.random() * 102) + 19
 var userPoints = 0
 var winCount = 0
 var lossCount = 0
+var crystalArray = []
 
-var crystalA = Math.floor(Math.random() * 12) + 1
-var crystalB = Math.floor(Math.random() * 12) + 1
-var crystalC = Math.floor(Math.random() * 12) + 1
-var crystalD = Math.floor(Math.random() * 12) + 1
+for (var i = 0; i < 4; i++) {
+    crystalArray.push(Math.floor(Math.random() * 12) + 1)  
+}
+
+console.log(goal)
+console.log(crystalArray)
+
+function resetGame() {
+    userPoints = 0
+    goal = Math.floor(Math.random() * 102) + 19
+    
+    $("#userPoints").text(userPoints)
+    $("#goal").text(goal)
+    
+    crystalArray = []
+    for (var i = 0; i < 4; i++) {
+        crystalArray.push(Math.floor(Math.random() * 12) + 1)  
+    }
+
+    console.log(goal)
+    console.log(crystalArray)
+}
 
 $("#goal").text(goal)
 
-$("#crystalA").attr("value", "crystalA")
-
-console.log($("#crystalA").val())
-
 $(".btn-choice").on("click", function() {
-    console.log($(this).val())
+    var position = $(this).attr("value")
+
+    for (var i = 0; i < crystalArray.length; i++) {
+        if (position == i) {
+            userPoints += crystalArray[position]
+            $("#userPoints").text(userPoints)
+        }
+    }
+
+    if (userPoints === goal) {
+        winCount++
+        $("#winCount").text(winCount)
+        
+        resetGame()
+    }
+
+    if (userPoints > goal) {
+        lossCount++
+        $("#lossCount").text(lossCount)
+        
+        resetGame()
+    }
 })
