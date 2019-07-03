@@ -1,0 +1,31 @@
+JS
+    - User
+        > Clicks number to add points
+
+    - 4 Crystal buttons
+        > Assigned random number from 1 - 12
+    
+    - Goal Number
+        > Assigned random number from 19 - 120
+
+    - User Points
+        > Starts at 0
+        > Goes up when user clicks crystals
+
+    - Game state 
+        > Win if User Points reaches Goal Number
+        > Lose if User Points goes over Goal Number
+
+    - Variables
+        > Goal Number
+        > User Points
+        > Crystal Values
+        > Wins / Losses
+
+HTML 
+    - Title
+    - Instructions
+    - Goal Number
+    - Wins / Losses
+    - Crystals
+    - User Points

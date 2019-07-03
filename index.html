@@ -13,8 +13,14 @@
 
 </head>
 <body class="bg-dark">
-    <div class="jumbotron jumbotron-fluid text-white bg-dark">
+    <div class="jumbotron jumbotron-fluid text-white bg-dark my-0 py-2">
         <h1 class="display-4 text-center">Crystal Collector</h1>
+    </div>
+
+    <div class="text-white text-center">
+        <p>Click on a crystal to get started!</p>
+        <p>Each crystal has a random value from 1-12</p>
+        <p>Reach the goal to win!</p>
     </div>
 
     <div class="container">
@@ -22,7 +28,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card mb-2">
-                    <h3 class="card-header">Computer Pick</h3>
+                    <h3 class="card-header">Goal</h3>
                     <div class="card-body text-center">
                         <h1 id="goal">0</h1>
                     </div>
@@ -36,16 +42,16 @@
                     <h3 class="card-header">You Pick</h3>
                     <div class="card-body text-center">
                         <button class="btn btn-info btn-choice" value="0">
-                            <h1>1</h1>
+                            <img src="assets/images/crystal.png" alt="crystal1">
                         </button>
                         <button class="btn btn-info btn-choice" value="1">
-                            <h1>2</h1>
+                            <img src="assets/images/crystal.png" alt="crystal2">
                         </button>
                         <button class="btn btn-info btn-choice" value="2">
-                            <h1>3</h1>
+                            <img src="assets/images/crystal.png" alt="crystal3">
                         </button>
                         <button class="btn btn-info btn-choice" value="3">
-                            <h1>4</h1>
+                            <img src="assets/images/crystal.png" alt="crystal4">
                         </button>
                     </div>
                 </div>
@@ -68,8 +74,8 @@
                 <div class="card mb-2">
                     <h3 class="card-header">Wins / Losses</h3>
                     <div class="card-body text-center">
-                        <h1 id="winCount">0</h1>
-                        <h1 id="lossCount">0</h1>
+                        <h1 id="winCount">Wins: 0</h1>
+                        <h1 id="lossCount">Losses: 0</h1>
                     </div>
                 </div>
             </div>

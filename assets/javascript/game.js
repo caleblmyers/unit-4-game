@@ -41,14 +41,14 @@ $(".btn-choice").on("click", function() {
 
     if (userPoints === goal) {
         winCount++
-        $("#winCount").text(winCount)
+        $("#winCount").text("Wins: " + winCount)
         
         resetGame()
     }
 
     if (userPoints > goal) {
         lossCount++
-        $("#lossCount").text(lossCount)
+        $("#lossCount").text("Losses: " + lossCount)
         
         resetGame()
     }
